@@ -1,0 +1,30 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+}
+p {
+  color: #444f62;
+}
+.container {
+  max-width: 1120px;
+  padding: 0 20px;
+  margin: auto;
+}
+.select-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+/* Responsive */
+@media only screen and (max-width: 768px) {
+  .select-wrapper {
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .select-wrapper {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+}
