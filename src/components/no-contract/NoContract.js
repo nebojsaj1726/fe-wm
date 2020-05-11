@@ -22,43 +22,45 @@ class NoContract extends Component {
   };
 
   componentDidMount() {
-    axios.get("http://www.mocky.io/v2/5e8465c23000008400cf4395").then((res) => {
-      this.setState({
-        nameL: res.data.items[0].name,
-        featL1: res.data.items[0].included[0].long_name,
-        featL2: res.data.items[0].included[1].long_name,
-        featL3: res.data.items[0].included[4].long_name,
-        featL4: res.data.items[0].included[2].long_name,
-        featL5: res.data.items[0].included[3].long_name,
-        img1Url: res.data.assets.tv_category,
-        img2Url: res.data.assets.net_category,
-        price: parseInt(
-          res.data.items[0].prices.price_recurring["Bez ugovorne obaveze"]
-        ),
-        nameC: res.data.items[1].name,
-        featC1: res.data.items[1].included[0].long_name,
-        featC2: res.data.items[1].included[1].long_name,
-        featC3: res.data.items[1].included[4].long_name,
-        featC4: res.data.items[1].included[5].long_name,
-        featC5: res.data.items[1].included[2].long_name,
-        featC6: res.data.items[1].included[3].long_name,
-        priceC: parseInt(
-          res.data.items[1].prices.price_recurring["Bez ugovorne obaveze"]
-        ),
-        nameR: res.data.items[2].name,
-        featR1: res.data.items[2].included[2].long_name,
-        featR2: res.data.items[2].included[3].long_name,
-        featR3: res.data.items[2].included[4].long_name,
-        featR4: res.data.items[2].included[5].long_name,
-        featR5: res.data.items[2].included[6].long_name,
-        featR6: res.data.items[2].included[7].long_name,
-        featR7: res.data.items[2].included[0].long_name,
-        featR8: res.data.items[2].included[1].long_name,
-        priceR: parseInt(
-          res.data.items[2].prices.price_recurring["Bez ugovorne obaveze"]
-        ),
+    axios
+      .get("https://www.mocky.io/v2/5e8465c23000008400cf4395")
+      .then((res) => {
+        this.setState({
+          nameL: res.data.items[0].name,
+          featL1: res.data.items[0].included[0].long_name,
+          featL2: res.data.items[0].included[1].long_name,
+          featL3: res.data.items[0].included[4].long_name,
+          featL4: res.data.items[0].included[2].long_name,
+          featL5: res.data.items[0].included[3].long_name,
+          img1Url: res.data.assets.tv_category,
+          img2Url: res.data.assets.net_category,
+          price: parseInt(
+            res.data.items[0].prices.price_recurring["Bez ugovorne obaveze"]
+          ),
+          nameC: res.data.items[1].name,
+          featC1: res.data.items[1].included[0].long_name,
+          featC2: res.data.items[1].included[1].long_name,
+          featC3: res.data.items[1].included[4].long_name,
+          featC4: res.data.items[1].included[5].long_name,
+          featC5: res.data.items[1].included[2].long_name,
+          featC6: res.data.items[1].included[3].long_name,
+          priceC: parseInt(
+            res.data.items[1].prices.price_recurring["Bez ugovorne obaveze"]
+          ),
+          nameR: res.data.items[2].name,
+          featR1: res.data.items[2].included[2].long_name,
+          featR2: res.data.items[2].included[3].long_name,
+          featR3: res.data.items[2].included[4].long_name,
+          featR4: res.data.items[2].included[5].long_name,
+          featR5: res.data.items[2].included[6].long_name,
+          featR6: res.data.items[2].included[7].long_name,
+          featR7: res.data.items[2].included[0].long_name,
+          featR8: res.data.items[2].included[1].long_name,
+          priceR: parseInt(
+            res.data.items[2].prices.price_recurring["Bez ugovorne obaveze"]
+          ),
+        });
       });
-    });
   }
 
   render() {
